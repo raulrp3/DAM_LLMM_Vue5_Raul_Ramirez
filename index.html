@@ -10,7 +10,7 @@
 		<div class="row mt-5">
 			<div class="col-sm"></div>
 			<div class="col-sm">
-				<input type="text" class="form-control" placeholder="Change color" @keyup.enter = "change">
+				<input type="text" class="form-control" placeholder="Change color" v-model = "style.backgroundColor">
 			</div>
 			<div class="col-sm"></div>
 		</div>
@@ -23,11 +23,6 @@
 		data: {
 			style: {
 				backgroundColor: ""
-			}
-		},
-		methods: {
-			change: function(){
-				this.style.backgroundColor = event.target.value;
 			}
 		}
 	});
