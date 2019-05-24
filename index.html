@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIOS VUE</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body :style = "style">
+	<div class="container mt-2">
+		<div class="row mt-5">
+			<div class="col-sm"></div>
+			<div class="col-sm">
+				<input type="text" class="form-control" placeholder="Change color" @keyup.enter = "change">
+			</div>
+			<div class="col-sm"></div>
+		</div>
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.js"></script>
+<script>
+	new Vue({
+		el: "body",
+		data: {
+			style: {
+				backgroundColor: ""
+			}
+		},
+		methods: {
+			change: function(){
+				this.style.backgroundColor = event.target.value;
+			}
+		}
+	});
+</script>
+</html>
